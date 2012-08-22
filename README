@@ -1,6 +1,14 @@
 Mahho's Mailbox Template Parser
 
-1. Ogolne informacje
+1. Ogólne informacje 
+2. Biblioteka i API
+3. Licencja i odpowiedzialność 
+4. Kompilacja
+5. Używanie mmtp
+6. Kontakt
+
+
+1. Ogólne informacje
 Mmtp w założeniu jest programem parsującym szablon skrzynki 
 (przykładowa w mailbox/poczta.hexnet.info) oraz który potrafi się 
 zalogować na podaną skrzynkę, pobrać listę maili i ich załączników.
