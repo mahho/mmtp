@@ -1,5 +1,30 @@
-Mahho's Mailbox Template Parser v. 0.1
+Mahho's Mailbox Template Parser
 
 1. Ogolne informacje
-2. 
-3. ...
+Mmtp w założeniu jest programem parsującym szablon skrzynki 
+(przykładowa w mailbox/poczta.hexnet.info) oraz który potrafi się 
+zalogować na podaną skrzynkę, pobrać listę maili i ich załączników.
+Przydatne przy testowaniu skrzynek do programów p2m.
+
+2. Biblioteka i API
+W niedługim czasie powstanie z tego osobna biblioteka (wraz ze stabilnym API)
+którą można będzie dołączać do własnych projektów. Api, w założeniu, będzie proste
+i łatwe do ogarnięcia.
+
+3. Licencja i odpowiedzialność
+Mmtp udostępniam na licencli GNU GPL http://pl.wikipedia.org/wiki/GNU_General_Public_License
+Nie biorę żadnej odpowiedzialności za wszelkie nieporządane skutki działania programu. 
+
+4. Kompilacja 
+Do kompilacji wymagany jest cmake oraz biblioteki pcrecpp i curl
+Kompilacja:
+$ cmake
+$ make
+
+5. Używanie mmtp
+Mmtp wymaga podania jednego parametru, czyli pliku szablonu skrzynki, tzn.
+$ mmtp mailbox/poczta.hexnet.info
+
+6. Kontakt
+Jeśli chciałbyś pomóc, masz jakieś pytania, zastrzeżenia pisz śmiało na mahho@mahho.net
+
