@@ -1,0 +1,29 @@
+* Parser  ma za zadanie odczytywac pliki w katalogu templates/
+* Nazwa pliku jest rownoznaczna z nazwa hosta
+* Zmienne 
+    - [[mainLink]]
+    - [[login]] - login do skrzynki
+    - [[domain]] - nazwa domeny 
+    - [[login@domain]] - login wraz zdomena
+    - [[password]] - haslo do skrzynki
+    - [[segmentLink]] - url do pojedynczego maila z zalacznikiem
+* Funkcje
+    *** Pobierajace itp ***
+    - mainLink(link) - ustawia glowny link do pobierania wszystkiego
+	np. mainLink(mail.google.com) czy mainLink(lajt.poczta.onet.pl)
+    - get(link) - pobiera tresc strony
+	np. get(http://poczta.onet.pl)
+    - post(link, dane) - wysyla podane dane
+	np. post(http://accounts.google.com, costam1=1&costam2=xxx&login=[[login]]&haslo=[[password]])
+    - search(warunek) - szuka podanego wyrazenia w danych sciagnietych getem 
+	np. search(Zalogowany jako: [[login@domain]]) - jesli warunek sie spelnia, nastepuje kontynowanie przetwarzania szablonu
+    - debug() - wyswietla dane pobrane getem
+    - nextPage(link) - link do nastepnej strony z wiadomosciami (korzysta z [[mainLink]])
+	np. nextPage(<a href="[[pageNumber]]">Następne listy)
+
+    *** Wyszukujace ***
+    - partLinkSearch(link) - wyszukuje wiadomosci wg podanego wzorca i pobiera z nich odpowiednie dane do zmiennych
+	np. partLinkSearch(<a href="@@segmentLink@@">@@segmentHeader@@</a>)
+    - downloadLinkSearch(link) - przeszukuje wiadomosc w poszukiwaniu linka do pobierania segmentu i zapisuje dane do zmiennych
+	np. downloadLinkSearch(<a href="download.html?@@downloadLink@@">Pobierz</a>)
+

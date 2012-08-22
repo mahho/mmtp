@@ -1,0 +1,8 @@
+mainLink(https://poczta.hexnet.info)
+
+get([[mainLink]])
+post(/action.php, folder=INBOX&action=login&user=[[login]]&domainnum=0&passwd=[[password]]&server=hexnet.info&port=993&servtype=ssl/novalidate-cert&lang=pl&theme=standard)
+search(Skrzynka odbiorcza)
+messageLinkSearch(<td class="column3"><a href="/action.php@@messageLink@@" title="@@messageHeader@@">)
+nextPageLinkSearch(action.php?skip=@@pageNumber@@, 1)
+downloadLinkSearch(<a href="download.html?@@downloadLink@@">Pobierz</a>)
